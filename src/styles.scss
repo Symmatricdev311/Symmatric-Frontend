@@ -10,6 +10,13 @@ body, html {
 	background: #ffff;
 
 }
+
+body {
+    font-family: aktiv-grotesk,sans-serif;
+    color: #1f2933;
+    -webkit-font-smoothing: antialiased;
+}
+
 ul, ul li {
 	padding: 0; 
 	margin: 0;
@@ -24,4 +31,9 @@ figure, filedset, form, h1, h2, h3, h4, h5, h6, img, li, ol, p, ul {
     padding: 0;
     border: 0;
     font-weight: 400;
+}
+
+*, blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, input, label, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0;
 }

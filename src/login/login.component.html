@@ -1,6 +1,53 @@
-<div class="login_layout">
-    <div class="site_wrap_login">
-        <symmatric-login-header></symmatric-login-header>
-        
+<symmatric-login-header></symmatric-login-header>
+<div class="login_welcome">
+    <div class="login_welcome__grey">
+
+        <div class="login_welcome__form">
+            <p class="login_welcome__heading">
+                Login Into Symmatric
+            </p>
+            <form [formGroup]="loginForm" (submit)="loginUser()">
+                <div class="form_elem__wrap"
+                    [ngClass]="{'form_elem__wrap--error': (lFrm?.login_email.dirty || lFrm?.login_email.dirty || lFrm?.login_email.touched) && ((lFrm?.login_email?.errors?.email || lFrm?.login_email?.errors?.pattern) || lFrm?.login_email.invalid)}">
+                    <label class="form_elem__label" for="email_address">Email address</label>
+                    <input type="text" required name="login_email" [(ngModel)]="formData.email"
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        [ngClass]="{'invalid': (lFrm?.login_email.dirty || lFrm?.login_email.touched) && (lFrm?.login_email.invalid)}"
+                        formControlName="login_email" aria-required="true" class="form_elem__input" id="email_address"
+                        type="email" autocomplete="off">
+                </div>
+
+                <div class="form_elem__wrap"
+                    [ngClass]="{'form_elem__wrap--error': (invalidPass.length || lFrm?.login_password.dirty || lFrm?.login_password.touched || submitted) && lFrm?.login_password.invalid}">
+                    <label class="form_elem__label" for="password">Password</label>
+                    <span class="form_elem__error_message" *ngIf="invalidPass.length">Invalid password</span>
+                    <span class="form_elem__error_message"
+                        *ngIf="(submitted || lFrm?.login_password.dirty || lFrm?.login_password.touched) && lFrm?.login_password.invalid && !lFrm?.login_password?.errors?.required">Password
+                        should be upto 6 characters</span>
+                    <span class="form_elem__error_message"
+                        *ngIf="(submitted || lFrm?.login_password.dirty || lFrm?.login_password.touched) && lFrm?.login_password?.errors?.required">Password
+                        is required</span>
+                    <div class="show_pass">
+                        <input [type]="passwordField" class="form_elem__input" (ngModelChange)="invalidPass = ''"
+                            [ngClass]="{'invalid': (invalidPass.length || lFrm?.login_password.dirty || lFrm?.login_password.touched || submitted) && lFrm?.login_password.invalid }"
+                            id="password" name="login_password" [(ngModel)]="formData.password"
+                            formControlName="login_password" aria-required="true" required>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--wide">Login</button>
+
+                <div class="login_welcome__link_wrap">
+                    <a class="login_welcome__link" href="javascript:void(0)">Forgotten
+                        password?</a>
+                </div>
+
+                <div class="login_welcome__signup_wrap">
+                    <label class="login_welcome__text">New to Symmatric ?</label>
+                    <a class="login_welcome__link" href="javascript:void(0)">
+                        Sign up with us!</a>
+                </div>
+
+            </form>
+        </div>
     </div>
 </div>
