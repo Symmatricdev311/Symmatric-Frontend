@@ -1,0 +1,159 @@
+.form_elem {
+    &__wrap {
+        margin-bottom: 18px;
+        position: relative;
+        display: block;
+    }
+
+    &--max_width {
+        max-width: 348px;
+    }
+    &--extension {
+        max-width: 88px;
+    }
+
+    &__label {
+        width: 100%;
+        display: block;
+        padding: 0 2px;
+        margin-bottom: 5px;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #63707e;
+
+        &--small {
+            font-size: 12px;
+            color: #7e8996;
+            margin-top: -4px;
+        }
+        &--small_text {
+            font-size: 12px;
+            color: #7e8996;
+        }
+        &--terms {
+            font-size: 10px !important;
+            line-height: 17px !important;
+            color: #63707e;
+            a {
+                color: #63707e;
+            }
+        }
+    }
+
+    &__input {
+        border: 1px solid #b5bdc5;
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        background: #ffffff;
+        position: relative;
+        outline: none;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 400;
+        letter-spacing: 0.015em;
+        font-family: aktiv-grotesk, sans-serif;
+        color: #616e7c;
+        transition: all 0.2s cubic-bezier(0.17, 0.67, 0.64, 0.96);
+
+        &[type="number"] {
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        &:focus,
+        &.focus {
+            box-shadow: 0px 0px 5px 0px rgba(21, 108, 216, 0.6);
+        }
+
+        &.invalid {
+            // border-color: $input-error;
+            // background: $input-error-bg;
+        }
+        &.valid {
+            // border-color: $input-valid;
+            // background: $input-valid-bg;
+        }
+
+        &--small {
+            max-width: 56px;
+        }
+
+        &--dark {
+            color: #1f2933;
+        }
+
+        &__checkbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            & + label {
+                position: relative;
+                padding-left: 23px;
+                cursor: pointer;
+                user-select: none;
+                font-size: 12px;
+                line-height: 15px;
+                min-height: 16px;
+                &:before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                    border: 1px solid #b5bdc5;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #ffffff;
+                }
+                &:after {
+                    content: "";
+                    background-image: url("/../assets/img/light-check.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            &:checked {
+                & + label {
+                    &:before {
+                        background: #156cd8;
+                    }
+                }
+            }
+
+            &--single {
+                & + label {
+                    margin-bottom: 0;
+                    padding-left: 14px;
+                }
+            }
+
+            &--large {
+                & + label {
+                    padding-left: 27px;
+                    font-size: 14px;
+                    letter-spacing: 0.0125em;
+                    // &:after {background-image: url('/../assets/img/large-check.svg');}
+                }
+            }
+        }
+    }
+}
