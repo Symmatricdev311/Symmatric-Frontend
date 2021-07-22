@@ -8,12 +8,12 @@ import { LoginFooterComponent } from './login-footer/login-footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LoginComponent, LoginHeaderComponent, LoginFooterComponent],
   imports: [
     CommonModule,
     LoginRoutingModule,
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  declarations: [LoginComponent, LoginHeaderComponent, LoginFooterComponent]
 })
 export class LoginModule { }

@@ -1,11 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Login } from 'src/app/shared/interface/login';
 @Component({
-  selector: 'app-login',
+  selector: 'symmatric-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  encapsulation:ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
   formData : Login;
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
 	invalidPass: string = '';
   submitted: boolean = false;
   passwordField: string = 'password';
-  constructor(private formBuilder : FormBuilder) { }
+  constructor(private formBuilder : FormBuilder,private router: Router) { }
 
   ngOnInit(): void {
     this.formData = new Login;
@@ -41,4 +42,16 @@ export class LoginComponent implements OnInit {
   get lFrm(){
       return this.loginForm.controls;
   }
+
+  /**
+	 * Used to set email value and redirect to forgot password
+	   */
+	forgotPassword(): void {
+		// if (this.loginForm.controls.login_email.valid) {
+		// 	this.sharedService.saveEmailData(this.loginForm.controls.login_email.value);
+		// } else {
+		// 	this.sharedService.saveEmailData('');
+		// }
+		this.router.navigate(["forgot-password"]);
+	}
 }
