@@ -7,18 +7,15 @@
                 Login Into Symmatric
             </p>
             <form [formGroup]="loginForm" (submit)="loginUser()">
-                <div class="form_elem__wrap"
-                    [ngClass]="{'form_elem__wrap--error': (lFrm?.login_email.dirty || lFrm?.login_email.dirty || lFrm?.login_email.touched) && ((lFrm?.login_email?.errors?.email || lFrm?.login_email?.errors?.pattern) || lFrm?.login_email.invalid)}">
+                <div class="form_elem__wrap">
                     <label class="form_elem__label" for="email_address">Email address</label>
                     <input type="text" required name="login_email" [(ngModel)]="formData.email"
-                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        [ngClass]="{'invalid': (lFrm?.login_email.dirty || lFrm?.login_email.touched) && (lFrm?.login_email.invalid)}"
-                        formControlName="login_email" aria-required="true" class="form_elem__input" id="email_address"
-                        type="email" autocomplete="off">
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form_elem__input"
+                        formControlName="login_email" aria-required="true" id="email_address" type="email"
+                        autocomplete="off">
                 </div>
 
-                <div class="form_elem__wrap"
-                    [ngClass]="{'form_elem__wrap--error': (invalidPass.length || lFrm?.login_password.dirty || lFrm?.login_password.touched || submitted) && lFrm?.login_password.invalid}">
+                <div class="form_elem__wrap">
                     <label class="form_elem__label" for="password">Password</label>
                     <span class="form_elem__error_message" *ngIf="invalidPass.length">Invalid password</span>
                     <span class="form_elem__error_message"
@@ -37,7 +34,8 @@
                 <button class="btn btn--primary btn--wide">Login</button>
 
                 <div class="login_welcome__link_wrap">
-                    <a class="login_welcome__link" href="javascript:void(0)">Forgotten
+                    <a class="login_welcome__link" href="javascript:void(0)"
+                    (click)="forgotPassword()">Forgotten
                         password?</a>
                 </div>
 
