@@ -149,6 +149,10 @@
         padding: 4px 0 8px;
     }
 
+    &__password_reset {
+		padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+	}
+    
     .login_welcome__grey {
         display: flex;
         flex-wrap: wrap;
