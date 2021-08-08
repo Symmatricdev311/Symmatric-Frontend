@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Symmatric-Frontend"
+    }
+  },
+  "defaultProject": "Symmatric-Frontend",
+  "cli": {
+    "analytics": false
+  }
 }

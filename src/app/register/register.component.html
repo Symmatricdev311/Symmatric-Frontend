@@ -1,4 +1,68 @@
-<div class="main">
+<div class="login_welcome">
+  <div class="login_welcome__grey">
+    <div class="login_welcome__form">
+      <a href="javascript:void(0)" title="Symmatric" class="signup_logo">
+        <img src="../../assets/image/logo2.png">
+    </a>
+      <p class="signup_welcome__heading">
+        Welcome to Symmatric
+      </p>
+      <p class="signup_welcome__heading_secondary">
+        Happy to have you
+      </p>
+      <form [formGroup]="registrationForm" (submit)="registerUser()">
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="first_name">First Name</label>
+          <input type="text" required name="first_name" formControlName="first_name" class="form_elem__input"
+            aria-required="true" id="first_name" type="text" autocomplete="off">
+        </div>
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="last_name">Last Name</label>
+          <input type="text" required name="last_name" formControlName="last_name" class="form_elem__input"
+            aria-required="true" id="last_name" type="text" autocomplete="off">
+        </div>
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="email_address">Email Address</label>
+          <input type="text" required name="email" formControlName="email"
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form_elem__input" aria-required="true"
+            id="email_address" type="email" autocomplete="off">
+        </div>
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="business_name">Business Name</label>
+          <input type="text" required name="business_name" formControlName="business_name" class="form_elem__input"
+            aria-required="true" id="business_name" autocomplete="off">
+        </div>
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="phone_number">Phone Number</label>
+          <input type="text" required name="phone_number" formControlName="phone" class="form_elem__input"
+            aria-required="true" id="phone_number" autocomplete="off">
+        </div>
+
+        <div class="form_elem__wrap">
+          <label class="form_elem__label" for="user_password">Password</label>
+          <div class="show_pass">
+            <input class="form_elem__input" type="password" name="user_password" formControlName="password" required>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--wide">Done</button>
+
+        <div class="login_welcome__signup_wrap">
+          <a class="login_welcome__link" href="javascript:void(0)" [routerLink]="['/register']">
+            By signing up you agree to our terms and privacy policy.
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="main">
   <div class="logo-signup">
     <img
       src="C:\Users\SANYOGITA\Desktop\HTML & CSS Symmatric\Images1\logooooooo.jpg"
@@ -41,4 +105,4 @@
       <p>By signing up you agree to our terms and privacy policy.</p>
     </div>
   </div>
-</div>
+</div> -->
