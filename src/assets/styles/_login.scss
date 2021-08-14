@@ -1,5 +1,5 @@
 .login_head {
-    padding: 15px 80px 15px 80px;
+    // padding: 15px 80px 15px 80px;
 
     .container {
         display: flex;
@@ -115,6 +115,23 @@
         position: relative;
     }
 
+    &__copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #7b8794;
+        a {
+            color: #7b8794;
+        }
+    }
+
     &__link_wrap {
         text-align: center;
         padding-top: 20px;
@@ -138,7 +155,7 @@
         text-decoration: none;
     }
 
-    &__text{
+    &__text {
         font-size: 16px;
         line-height: 16px;
         font-weight: 400;
@@ -150,9 +167,13 @@
     }
 
     &__password_reset {
-		padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
-	}
-    
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     .login_welcome__grey {
         display: flex;
         flex-wrap: wrap;
