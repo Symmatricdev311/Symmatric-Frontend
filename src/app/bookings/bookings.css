@@ -1,0 +1,180 @@
+body {
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+  background-color: white;
+}
+/*css for Frame for all the modules side and top bar starts here*/
+
+.header_allmodules {
+  box-sizing: border-box;
+  display: inline-block;
+
+  height: 6em;
+  width: 141em;
+  background-color: rgba(255, 214, 255, 0.28);
+  border: 2px solid white;
+}
+
+.content_logo {
+  box-sizing: border-box;
+  display: inline-flex;
+  position: absolute;
+  height: 4em;
+  width: 40em;
+  margin-top: 1em;
+}
+
+.logo_Companyprofile {
+  position: absolute;
+  margin-top: -0.8em;
+  margin-left: 0.5em;
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+}
+#content1 {
+  position: absolute;
+  margin-top: -0.45em;
+  font-size: 18px;
+  margin-left: 6em;
+  letter-spacing: 0.5px;
+}
+
+/*
+        #content2 {
+          position: absolute;
+          box-sizing: border-box;
+          margin-top: 0.25em;
+          margin-left: 2em;
+          letter-spacing: 0.5px;
+        }/*/
+
+.main_wrapper {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  height: 90em;
+  width: 140em;
+  background-color: white;
+}
+.left_panel {
+  box-sizing: border-box;
+  width: 340px;
+  height: 60em;
+  background-color: hsla(333, 100%, 53%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
+}
+#side_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  height: 340px;
+  width: 300px;
+  font-size: 20px;
+  margin-left: 1em;
+  margin-right: 1em;
+  list-style: none;
+}
+
+#side_bar li {
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  height: 3em;
+  background-color: white;
+  letter-spacing: 00.025em;
+}
+.center_panel_bookings {
+  box-sizing: border-box;
+  height: 60em;
+  width: 300em;
+}
+#bookings_table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+td {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+  width: 200;
+  height: 50px;
+}
+
+th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 200;
+  height: 50px;
+  background-color: hsla(333, 100%, 53%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+}
+
+tr:nth-child(3) > td:nth-child(2) {
+  background: plum;
+}
+
+input[type="checkbox"] {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 30px;
+}
+td:nth-child(1) {
+  width: 4%;
+}
+#top_box_booking {
+  width: 100%;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  background-color: lightgrey;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+
+#elements_topbox_booking {
+  height: 2em;
+  width: 40em;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  justify-content: space-between;
+  font-size: 22px;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
